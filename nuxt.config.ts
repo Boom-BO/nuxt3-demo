@@ -50,7 +50,7 @@ export default defineNuxtConfig({
 		'nuxt-lodash'
 	],
 	i18n: {
-		vueI18n: './i18n/index.ts'
+		// vueI18n: './i18n/index.ts'
 	},
 	// runtimeConfig: {
 	// 	// The private keys which are only available server-side
