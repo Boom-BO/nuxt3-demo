@@ -95,9 +95,6 @@ const menuList = reactive([
 		children: []
 	}
 ])
-const reverseMenu = computed(() => {
-	return menuList
-})
 const onMenuClick = (index: string | number, { route: string }: any) => {
 	activeIndex.value = string
 }

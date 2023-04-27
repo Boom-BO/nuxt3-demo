@@ -31,7 +31,7 @@ declare global {
 		/**
 		 * 日文名
 		 */
-		jp?: null | string
+		// jp?: null | string
 	}
 
 	type Staff = {

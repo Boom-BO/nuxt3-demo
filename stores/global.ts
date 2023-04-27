@@ -3,7 +3,7 @@ export const useGlobalStore = defineStore('global', {
 	state: () => {
 		const func = () => {
 			const urlLocale = useRoute().fullPath.split('/')[1]
-			if (urlLocale === 'en' || urlLocale === 'jp') {
+			if (urlLocale === 'en') {
 				const { $i18n } = useNuxtApp()
 				$i18n.setLocale(urlLocale)
 				const locale = useCookie('locale', {
@@ -25,12 +25,12 @@ export const useGlobalStore = defineStore('global', {
 			localeState: func() || useCookie('locale').value || 'cn',
 			documentReadyState: true
 		} as {
-			localeState: 'cn' | 'en' | 'jp'
+			localeState: 'cn' | 'en'
 			documentReadyState: boolean
 		}
 	},
 	actions: {
-		setLocale(newLocale: 'cn' | 'en' | 'jp') {
+		setLocale(newLocale: 'cn' | 'en') {
 			const { $i18n } = useNuxtApp()
 			$i18n.setLocale(newLocale)
 			const locale = useCookie('locale', {

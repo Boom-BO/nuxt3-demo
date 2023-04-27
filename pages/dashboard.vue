@@ -1,14 +1,15 @@
 <template>
 	<div class="dashboard">
 		<div class="banner">
-			<div class="solgan">World Peace<br />世界和平</div>
+			<div class="solgan">World Peace<br />世界和平 {{ $t('confirm') }}</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+// import lodash from 'lodash'
+
 const { t, locale } = useI18n()
-console.log('🚀 ~ file: dashboard.vue:7 ~ locale:', locale)
 </script>
 <style lang="scss" scoped>
 .dashboard {
